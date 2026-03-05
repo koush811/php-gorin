@@ -1,5 +1,5 @@
 <?php 
-
+    $color = "#ffffff";
     if($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["color"])){
         $color = $_POST["color"]; 
     }
@@ -15,6 +15,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -28,7 +29,9 @@
                 value="<?= $color ?>"
             >
             <button type="submit">Set Color</button>
+            <?php echo($color)?>
         </p>
+       
     </form>
 </body>
 </html>
