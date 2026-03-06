@@ -1,33 +1,5 @@
 <?php 
-    /*if(file_exists($file)){
-        $json = file_get_contents($file);
-        $posts = json_decode($json, true);
-
-        if(!is_array(($posts))){
-            $posts = [];
-        }
-    }else{
-        $posts = [];
-    }
-
-    if($_SERVER["REQUEST_METHOD"] === "POST"){
-
-        $name = $_POST["name"];
-        $message = $_POST["message"];
-
-        $newpost = [
-            "name" => $name,
-            "message" => $message,
-            "time" => date("Y-m-d H:i:s")
-        ];
-        array_unshift($posts,$newpost);
     
-        file_put_contents($file,json_encode($posts,JSON_PRETTY_PRINT));
-
-        header("Location: " . $_SERVER["PHP_SELF"]);
-        exit;
-    }
-    */
     
     $file = "bbs.json";
 
@@ -100,6 +72,13 @@
                 <div>(<?= $post["time"] ?>)</div>
             </div>
             <div><?= $post["message"] ?></div>
+        </div>
+        <div>
+            <div class="area">
+                <div class="name"><?= htmlspecialchars($post["name"]) ?></div>
+                <div>(<?= htmlspecialchars($post["time"]) ?>)</div>
+            </div>
+            <div><?= htmlspecialchars($post["message"]) ?></div>
         </div>
 
     <?php endforeach;?>
