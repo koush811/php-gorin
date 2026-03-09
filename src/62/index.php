@@ -46,18 +46,12 @@
 </head>
 
 <body>
-  <h1>Docker PHP開発環境</h1>
-  <p>Docker PHP開発環境へようこそ！</p>
+  <h1>63回</h1>
   <ul>
-    <li><a href="./info.php">PHP 情報</a></li>
-    <li><a href="http://localhost:8081" target="_blank">phpMyAdmin</a></li>
-    <li><a href="http://localhost:8025" target="_blank">MailHog</a></li>
-    <li><a href="./db.php">データベース接続テスト</a></li>
-    <li><a href="./mail.php">メール送信テスト</a></li>
-    <li><a href="http://localhost:8080/63">63回</a></li>
-    <li><a href="http://localhost:8080/62">62回</a></li>
-    <li></li>
-    <li></li>
+    <li><a href="http://localhost:8080">TOPに戻る</a></li>
+    <li><a href="http://localhost:8080/62/D1">D1</a></li>
+    <li><a href="http://localhost:8080/62/D2">D2</a></li>
+    <li><a href="http://localhost:8080/62/D3">D3</a></li>
   </ul>
 </body>
 
