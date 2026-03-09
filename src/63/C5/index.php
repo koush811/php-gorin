@@ -1,12 +1,12 @@
 <?php 
-    header("Content-Type: application/jaon");
+    header("Content-Type: application/json");
 
     $dev = [
         "status" => "success",
-        "message" => "Hello",
+        "message" => "あああ",
         "timestamp" => date("Y-m-d H:i:s"),
         "data" => "item1",
     ];
 
-    echo json_encode($dev, JSON_PRETTY_PRINT);
+    echo json_encode($dev, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 ?>
