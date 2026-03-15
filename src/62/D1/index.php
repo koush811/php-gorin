@@ -30,6 +30,9 @@
     <title>Document</title>
 </head>
 <body>
+    <?php foreach($numbers as $value): ?>
+        <p><?= $value ?></p>
+    <?php endforeach; ?>
     <p>最頻値:<?= $answer ?></p>
 </body>
 </html>
