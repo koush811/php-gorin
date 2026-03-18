@@ -51,7 +51,9 @@
                 <td><?= $value["name"] ?></td>
                 <td><?= $value["email"] ?></td>
             </tr>
-        <?php  endforeach;?>             
+
+        <?php endforeach; ?>
     </table>
 </body>
 </html>
+

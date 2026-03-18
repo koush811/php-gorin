@@ -49,11 +49,15 @@
   <h1>63回</h1>
   <ul>
     <li><a href="http://localhost:8080">TOPに戻る</a></li>
+    <li><a href="http://localhost:8080/63/A1">A1</a></li>
+    <li><a href="http://localhost:8080/63/A2">A2</a></li>
+    <li><a href="http://localhost:8080/63/B1">B1</a></li>
     <li><a href="http://localhost:8080/63/C1">C1</a></li>
     <li><a href="http://localhost:8080/63/C2">C2</a></li>
     <li><a href="http://localhost:8080/63/C3">C3</a></li>
     <li><a href="http://localhost:8080/63/C4">C4</a></li>
     <li><a href="http://localhost:8080/63/C5">C5</a></li>
+    
   </ul>
 </body>
 
