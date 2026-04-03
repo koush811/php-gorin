@@ -23,7 +23,7 @@
 <body>
     <form method="post">
         <div>Choose a background color: <input type="color" name="color" value="<?= $color ?>"></div>
-        <button type="submit">aaaaa</button>
+        <button type="submit">決定</button>
     </form>
 </body>
 </html>
