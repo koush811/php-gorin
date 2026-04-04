@@ -1,0 +1,13 @@
+body{
+    height: 100vh;
+    margin: 0;
+}
+
+canvas{
+    width: 400px;
+    height: 320px;
+    border: solid 1px black;
+}
+
+
+
