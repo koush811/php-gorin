@@ -1,8 +1,11 @@
+
+
 isStart = false
 const display = document.getElementById('display')
 const startbtn = document.getElementById("start")
 const stopbtn = document.getElementById("stop")
 const resetbtn = document.getElementById("reset")
+const lap = document.getElementById('lap')
 let dev = 0
 let startTime = 0
 let timer
@@ -39,4 +42,17 @@ resetbtn.addEventListener('click',()=>{
     dev = 0
     display.textContent = "00:00:00"
 })
+
+const laplist = document.getElementById('laplist')
+
+lap.addEventListener('click',()=>{
+    isStart = false
+    clearInterval(timer)
+    const laptime = display.textContent
+    
+    
+
+})
+
+
 

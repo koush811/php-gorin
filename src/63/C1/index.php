@@ -1,6 +1,13 @@
 <?
-    $color = "white";
+    /*$color = "white";
     if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["color"])){
+        $color = $_POST["color"];
+    }
+    echo $color;*/
+
+    $color = "white";
+
+    if($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["color"])){
         $color = $_POST["color"];
     }
     echo $color;

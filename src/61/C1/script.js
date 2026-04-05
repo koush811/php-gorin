@@ -13,19 +13,19 @@ function Color(){
 }
 
 button.addEventListener("click",()=>{
-    const word = input.value
-    console.log(word)
 
-    let original = text.textContent
+    const word = input.value
+
+    let origintext = text.textContent
 
     if(word === "")return
 
     const regex = new RegExp(word,"g")
 
-    const hilight = original.replace(regex,function(match){
+    const hilight = origintext.replace(regex,(match)=>{
         const color = Color();
-        return `<span style="background-color:${color};">${match}</span>`
-    })
+        return `<span style="background-color = ${color}">${match}<span>`
+    }) 
 
     text.innerHTML = hilight;
 })

@@ -1,0 +1,15 @@
+.content{
+    width: 100px;
+    height: 200px;
+    border: solid 1px black;
+    border-radius: 20px;
+}
+
+.line{
+    border: solid 2px blue;
+}
+
+button:hover{
+    background-color: gray;
+}
+

@@ -1,5 +1,5 @@
 <?php 
-    session_start();
+    /*session_start();
 
     if(isset($_GET["logout"])){
         session_destroy();
@@ -12,8 +12,26 @@
         if($password === "pass"){
             $_SESSION["login"] = true;
         }
-    }
-?>
+    }*/
+
+        session_start();
+
+        if(isset($_GET["logout"])){
+            session_destroy();
+            session_unset();
+            header("Location:". $_SERVER["PHP_SELF"]);
+            exit;
+        }
+
+        if($_SERVER["REQUEST_METHOD"] ==="POST" && isset($_POST["pass"])){
+            $pass = $_POST["pass"];
+            if($pass === "pass"){
+                $_SESSION["login"] = true;
+            }else{
+                echo "不一致";
+            }
+        }
+?>     
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,16 +41,17 @@
     <title>Document</title>
 </head>
 <body>
-    <?php if(isset($_SESSION["login"]) && $_SESSION["login"] === true): ?>
+    <?php if(isset($_SESSION["login"]) && $_SESSION["login"] ===  true): ?>
         <h1>Welcome</h1>
-        <a href="?logout=1">logout</a>
-    <?php else: ?>    
-
+        <a href="?logout=1">ログアウト</a>
+    <?php else: ?>
+    
     <form method="post">
         <input type="password" name="pass">
         <button type="submit">login</button>
     </form>
-    <?php endif; ?>
+
+    <?php endif ?>
 </body>
 </html>
 
