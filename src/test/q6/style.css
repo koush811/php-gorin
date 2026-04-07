@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f5f5f5;
+  color: #222;
+}
+
+.color-page {
+  max-width: 980px;
+  margin: 40px auto;
+  padding: 24px;
+}
+
+.color-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 24px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #0b57d0;
+  font-weight: 700;
+}
+
+.copy h1 {
+  margin: 0 0 12px;
+}
+
+.copy p {
+  line-height: 1.6;
+}
+
+.preview-wrap {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+}
+
+.preview {
+  min-height: 180px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  background: #4a90e2;
+}
+
+.preview-value {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.color-form {
+  display: grid;
+  gap: 18px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.field span,
+.slider-group label {
+  font-weight: 700;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.rgb-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.slider-group {
+  display: grid;
+  gap: 8px;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+.error {
+  min-height: 1.5em;
+  margin: 0;
+  color: #c00;
+  font-weight: 700;
+}
+
+.is-invalid {
+  border-color: #c00;
+}
+
+@media (max-width: 820px) {
+  .color-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .rgb-grid {
+    grid-template-columns: 1fr;
+  }
+}

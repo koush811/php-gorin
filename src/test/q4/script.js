@@ -48,9 +48,13 @@ const laplist = document.getElementById('laplist')
 lap.addEventListener('click',()=>{
     isStart = false
     clearInterval(timer)
-    const laptime = display.textContent
+    const lapdiv = document.createElement('li')
+    lapdiv.textContent = display.textContent
+    laplist.appendChild(lapdiv)
     
-    
+    if(laplist.children.length > 10){
+        laplist.removeChild(laplist.firstElementChild)
+    }
 
 })
 

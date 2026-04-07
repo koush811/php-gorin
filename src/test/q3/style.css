@@ -1,7 +1,7 @@
-label{
-    width: 100px;
-    height: 100px;
-    transition: .2s;
+label h1{
+    width: 200px;
+    height: auto;
+    transition: .3s;
 }
 
 input{
@@ -9,15 +9,18 @@ input{
 }
 
 .content{
-    display: none;
-    transition: .2s;
+    max-height: 0;
+    overflow: hidden;
+    transition:max-height .3s ease;
+   
 }
 
 input:checked + label .content{
-    display: block;
+    max-height: 200px;
 }
 
 input:checked + label h1{
-    background-color: rgba(255, 0, 0, 0.224);
+    color: rgb(0, 127, 230);
+    text-decoration:underline;
 }
 

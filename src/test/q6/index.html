@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="color-page">
+    <section class="color-card">
+      <div class="copy">
+        <p class="eyebrow">B2: カラー同期ツール</p>
+        <h1>Color Sync Tool</h1>
+        <p>HEX、RGB、RGBスライダーを相互同期しながら、現在の色をリアルタイムで確認できます。</p>
+      </div>
+
+      <div class="preview-wrap">
+        <div class="preview" id="colorPreview" aria-label="選択中の色プレビュー"></div>
+        <p class="preview-value" id="previewValue">#4A90E2</p>
+      </div>
+
+      <form class="color-form" novalidate>
+        <label class="field">
+          <span>HEX</span>
+          <input id="hexInput" type="text" value="#4A90E2" autocomplete="off">
+        </label>
+
+        <div class="rgb-grid">
+          <label class="field">
+            <span>R</span>
+            <input id="rInput" type="number" min="0" max="255" value="74">
+          </label>
+          <label class="field">
+            <span>G</span>
+            <input id="gInput" type="number" min="0" max="255" value="144">
+          </label>
+          <label class="field">
+            <span>B</span>
+            <input id="bInput" type="number" min="0" max="255" value="226">
+          </label>
+        </div>
+
+        <div class="slider-group">
+          <label for="rRange">Rスライダー</label>
+          <input id="rRange" type="range" min="0" max="255" value="74">
+          <label for="gRange">Gスライダー</label>
+          <input id="gRange" type="range" min="0" max="255" value="144">
+          <label for="bRange">Bスライダー</label>
+          <input id="bRange" type="range" min="0" max="255" value="226">
+        </div>
+
+        <p id="errorMessage" class="error" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
