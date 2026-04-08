@@ -7,8 +7,9 @@ let dev = 0
 let startTime = 0
 let timer
 
-startbtn.addEventListener("click",()=>{
+startbtn.addEventListener('click',()=>{
     if(isStart) return;
+
     startTime = Date.now() - dev
     isStart = true
 
@@ -16,8 +17,8 @@ startbtn.addEventListener("click",()=>{
         dev = Date.now() - startTime
 
         let ms = Math.floor((dev % 1000) /10)
-        let ss = Math.floor((dev / 1000) % 60)
-        let mins = Math.floor(dev /60000)
+        let ss = Math.floor((dev /1000 ) % 60)
+        let mins = Math.floor(dev / 60000)
 
         ms = ms.toString().padStart(2,"0")
         ss = ss.toString().padStart(2,"0")
@@ -25,8 +26,8 @@ startbtn.addEventListener("click",()=>{
 
         display.textContent = `${mins}:${ss}:${ms}`
     },10)
-
 })
+
 
 stopbtn.addEventListener('click',()=>{
     isStart = false
