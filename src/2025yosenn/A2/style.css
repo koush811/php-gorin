@@ -1,55 +1,57 @@
 body{
-    margin: 0;
     height: 100vh;
+    box-sizing: border-box;
 }
 
 .aleart{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    padding: 20px;
     width: 300px;
     height: 100px;
     border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
     position: relative;
 }
 
-.btn{
-    position: absolute;
-    top: 13%;
-    right: 13%;
-}
-
-.line{
-    background-color: gray;
-    width: 30px;
-    height: 5px;
-    transform: rotate(45deg);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-}
-
-.two{
-    transform: rotate(-45deg);
-}
-
 .blue{
-    background-color: rgb(0, 183, 255);
-    
+    border: solid 2px blue;
 }
 
-.green{
-    background-color: lightgreen;
-
+.green {
+    border: solid 2px green;
 }
 
 .yellow{
-    background-color: yellow;
+    border: solid 2px yellow;
 }
 
-.red{
-    background-color: rgb(255, 123, 0);
+.red {
+    border: solid 2px orange;
+}
+
+.btn{
+    border: solid 2px gray;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.line{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 3px;
+    background-color: gray;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.two{
+    transform: translate(-50%, -50%) rotate(-45deg);
 }
