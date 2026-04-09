@@ -1,37 +1,23 @@
-<?php 
-    /*session_start();
+<?php
+    session_start();
+
+    if($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["pass"])){
+        $pass = $_POST["pass"];
+        if($pass === "pass"){
+            $_SESSION["login"] = true;
+        }else{
+            echo "不一致";
+        }
+    }
 
     if(isset($_GET["logout"])){
         session_destroy();
-        header("Location: " . $_SERVER["PHP_SELF"]);
+        session_unset();
+        header("Location:".$_SERVER["PHP_SELF"]);
         exit;
     }
 
-    if($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["pass"])){
-        $password = $_POST["pass"];
-        if($password === "pass"){
-            $_SESSION["login"] = true;
-        }
-    }*/
-
-        session_start();
-
-        if(isset($_GET["logout"])){
-            session_destroy();
-            session_unset();
-            header("Location:". $_SERVER["PHP_SELF"]);
-            exit;
-        }
-
-        if($_SERVER["REQUEST_METHOD"] ==="POST" && isset($_POST["pass"])){
-            $pass = $_POST["pass"];
-            if($pass === "pass"){
-                $_SESSION["login"] = true;
-            }else{
-                echo "不一致";
-            }
-        }
-?>     
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -41,17 +27,14 @@
     <title>Document</title>
 </head>
 <body>
-    <?php if(isset($_SESSION["login"]) && $_SESSION["login"] ===  true): ?>
+    <?php if(isset($_SESSION["login"]) && $_SESSION["login"] === true): ?>
         <h1>Welcome</h1>
-        <a href="?logout=1">ログアウト</a>
+        <a href="?logout=1">Logout</a>
     <?php else: ?>
-    
-    <form method="post">
+    <form action="" method="post">
         <input type="password" name="pass">
-        <button type="submit">login</button>
+        <button type="submit">Login</button>
     </form>
-
     <?php endif ?>
 </body>
 </html>
-
